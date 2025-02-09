@@ -21,7 +21,7 @@ byte previous_button_states[4] = {LOW, LOW, LOW, LOW};
 byte led_states[4] = {LOW, LOW, LOW, LOW};
 
 unsigned long debounce_duration = 50; // in ms
-unsigned long lastUpdateTime = 0;
+unsigned long last_update_time = 0;
 
 void init_leds();
 void init_buttons();
