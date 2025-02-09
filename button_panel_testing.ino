@@ -36,11 +36,11 @@ void update_button_states() {
 }
 
 void update_led(enum COLOR_STATES state) {
-  if (millis() - lastUpdateTime > debounce_duration) {
+  if (millis() - last_update_time > debounce_duration) {
     byte button_state = button_states[state];
 
     if (button_state != previous_button_states[state]) {
-      lastUpdateTime = millis();
+      last_update_time = millis();
       previous_button_states[state] = button_state;
 
       if (button_state == LOW) {
